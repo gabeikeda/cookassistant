@@ -1,4 +1,5 @@
 class API::IngredientsController < ApplicationController
+  before_action :set_recipe
   before_action :set_ingredient, only: [:show, :update, :destroy]
 
   # GET /ingredients

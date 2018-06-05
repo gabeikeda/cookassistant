@@ -7,30 +7,33 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Recipe.destroy_all
-Ingredient.destroy_al
+Ingredient.destroy_all
 
-meal_types = [
-"breakfast",
-"lunch",
-"dinner"
-"snack"
-]
+meal_types = 
+  [
+    "breakfast",
+    "lunch",
+    "dinner",
+    "snack"
+  ]
 
-descriptions = [
-  "Delicious quick meal",
-  "Great for large parties",
-  "Always love having this dish",
-  "Yummy!"
-]
+descriptions = 
+  [
+    "Delicious quick meal",
+    "Great for large parties",
+    "Always love having this dish",
+    "Yummy!"
+  ]
 
 
 
 10.times do 
-  Recipe.new( 
-    name: Faker::Food.dish
-    meal_type: meal_types.sample
-    cook_time: Faker::Number.between(60, 120)
-    calories: Faker::Number.between(100, 1500)
-    serving_size Faker::Number.between(1, 10)
+  Recipe.create( 
+    name: Faker::Food.dish,
+    meal_type: meal_types.sample,
+    cook_time: Faker::Number.between(60, 120),
+    calories: Faker::Number.between(100, 1500),
+    serving_size: Faker::Number.between(1, 10),
     description: descriptions.sample
   )
+end

@@ -5,3 +5,29 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Meal_Type = [
+"breakfast",
+"lunch",
+"dinner"
+"snack"
+]
+
+Description = [
+  "Delicious quick meal",
+  "Great for large parties",
+  "Always love having this dish",
+  "Yummy!"
+]
+
+
+
+10.times do 
+  Recipe.new( 
+    name: Faker::Food.dish
+    meal_type: Meal_Type.sample
+    cook_time: Faker::Number.between(60, 120)
+    calories: Faker::Number.between(100, 1500)
+    serving_size Faker::Number.between(1, 10)
+    description: Description.sample
+  )

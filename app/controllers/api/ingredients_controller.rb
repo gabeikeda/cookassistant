@@ -47,6 +47,6 @@ class API::IngredientsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def ingredient_params
-      params.require(:ingredient).permit(:name, :measurement, :recipe_id)
+      params.require(:ingredient).permit(:ingredient_name, :measurement, :recipe_id)
     end
 end

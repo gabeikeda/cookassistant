@@ -25,6 +25,19 @@ descriptions =
     "Yummy!"
   ]
 
+  measurement = 
+  [
+    "1/3 teaspoon",
+    "1/2 cup",
+    "1/4 cup"
+  ]
+
+  ingredientname = 
+  [
+    "flour",
+    "baking soda",
+    "butter"
+  ]
 
 
 10.times do 
@@ -35,5 +48,12 @@ descriptions =
     calories: Faker::Number.between(100, 1500),
     serving_size: Faker::Number.between(1, 10),
     description: descriptions.sample
+  )
+end
+
+10.times do 
+  Ingredient.create(
+    measurement: measurement.sample,
+    ingredient_name: ingredientname.sample
   )
 end

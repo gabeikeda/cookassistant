@@ -9,51 +9,11 @@
 Recipe.destroy_all
 Ingredient.destroy_all
 
-meal_types = 
-  [
-    "breakfast",
-    "lunch",
-    "dinner",
-    "snack"
-  ]
-
-descriptions = 
-  [
-    "Delicious quick meal",
-    "Great for large parties",
-    "Always love having this dish",
-    "Yummy!"
-  ]
-
-  measurement = 
-  [
-    "1/3 teaspoon",
-    "1/2 cup",
-    "1/4 cup"
-  ]
-
-  ingredientname = 
-  [
-    "flour",
-    "baking soda",
-    "butter"
-  ]
+orange_chicken = Recipe.create(name: 'Orange Chicken')
+orange_chicken.ingredients.create!(name 'item1')
 
 
-10.times do 
-  Recipe.create( 
-    name: Faker::Food.dish,
-    meal_type: meal_types.sample,
-    cook_time: Faker::Number.between(60, 120),
-    calories: Faker::Number.between(100, 1500),
-    serving_size: Faker::Number.between(1, 10),
-    description: descriptions.sample
-  )
-end
-
-10.times do 
-  Ingredient.create(
-    measurement: measurement.sample,
-    ingredient_name: ingredientname.sample
-  )
-end
+pesto_pasta = Recipe.create(name: 'Pesto Pasta')
+pesto_past.ingredients.create!(name: 'item1', measurement: '1/3 cup')
+pesto_past.ingredients.create!(name: 'item1', measurement: '1/3 cup')
+pesto_past.ingredients.create!(name: 'item1', measurement: '1/3 cup')

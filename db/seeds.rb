@@ -9,7 +9,12 @@
 Recipe.destroy_all
 Ingredient.destroy_all
 
-pesto_pasta = Recipe.create(name: 'Pesto Pasta')
+pesto_pasta = Recipe.create(name: 'Pesto Pasta',
+  meal_type: "dinner",
+  cook_time: 30,
+  calories: 1500,
+  serving_size: 4,
+  description: "a delicious pasta dinner")
 pesto_pasta.ingredients.create!(name: 'chopped onion', measurement: '1/2 cup')
 pesto_pasta.ingredients.create!(name: 'pesto', measurement: '2 1/2 tablespoons')
 pesto_pasta.ingredients.create!(name: 'olive oil', measurement: '2 tablespoons')

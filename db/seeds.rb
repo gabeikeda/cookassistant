@@ -9,11 +9,28 @@
 Recipe.destroy_all
 Ingredient.destroy_all
 
-orange_chicken = Recipe.create(name: 'Orange Chicken')
-orange_chicken.ingredients.create!(name 'item1')
-
-
 pesto_pasta = Recipe.create(name: 'Pesto Pasta')
-pesto_past.ingredients.create!(name: 'item1', measurement: '1/3 cup')
-pesto_past.ingredients.create!(name: 'item1', measurement: '1/3 cup')
-pesto_past.ingredients.create!(name: 'item1', measurement: '1/3 cup')
+pesto_pasta.ingredients.create!(name: 'chopped onion', measurement: '1/2 cup')
+pesto_pasta.ingredients.create!(name: 'pesto', measurement: '2 1/2 tablespoons')
+pesto_pasta.ingredients.create!(name: 'olive oil', measurement: '2 tablespoons')
+pesto_pasta.ingredients.create!(name: 'pasta', measurement: '16 ounces')
+pesto_pasta.ingredients.create!(name: 'salt', measurement: 'a pinch')
+pesto_pasta.ingredients.create!(name: 'black pepper', measurement: 'a pinch')
+
+orange_chicken = Recipe.create(name: 'Orange Chicken')
+orange_chicken.ingredients.create!(name: 'skinless, boneless chicken breast halves', measurement: '6')
+orange_chicken.ingredients.create!(name: 'all-purpose flour', measurement: '1/4 cup')
+orange_chicken.ingredients.create!(name: 'chicken broth', measurement: '1 can')
+orange_chicken.ingredients.create!(name: 'lemon juice', measurement: '2 teaspoons')
+orange_chicken.ingredients.create!(name: 'orange marmalade', measurement: '2/3 cup')
+orange_chicken.ingredients.create!(name: 'ground black pepper', measurement: '1/4 teaspoon')
+
+sugar_cookies = Recipe.create(name: 'Sugar Cookies')
+sugar_cookies.ingredients.create!(name: 'all-purpose flour', measurement: '2 3/4 cups')
+sugar_cookies.ingredients.create!(name: 'baking soda', measurement: '1 teaspoon')
+sugar_cookies.ingredients.create!(name: 'salt', measurement: '1/2 teaspoon')
+sugar_cookies.ingredients.create!(name: 'margarine', measurement: '1 1/4 cup')
+sugar_cookies.ingredients.create!(name: 'white sugar', measurement: '2 cups')
+sugar_cookies.ingredients.create!(name: 'eggs', measurement: '2')
+sugar_cookies.ingredients.create!(name: 'vanilla extract', measurement: '2 teaspoons')
+sugar_cookies.ingredients.create!(name: 'white sugar (for decoration)', measurement: '1/4 cup')

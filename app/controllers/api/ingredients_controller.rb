@@ -45,13 +45,13 @@ class API::IngredientsController < ApplicationController
     @recipe = Recipe.find_by(name: params[:name])
   end
 
-    # Use callbacks to share common setup or constraints between actions.
-    def set_ingredient
-      @ingredient = Ingredient.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_ingredient
+    @ingredient = Ingredient.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def ingredient_params
-      params.require(:ingredient).permit(:name, :measurement, :recipe_id)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def ingredient_params
+    params.require(:ingredient).permit(:name, :measurement, :recipe_id)
+  end
 end

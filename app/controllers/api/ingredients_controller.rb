@@ -40,6 +40,11 @@ class API::IngredientsController < ApplicationController
   end
 
   private
+
+  def set_recipe
+    @recipe = Recipe.find_by(name: params[:name])
+  end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_ingredient
       @ingredient = Ingredient.find(params[:id])

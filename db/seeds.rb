@@ -9,7 +9,7 @@
 Recipe.destroy_all
 Ingredient.destroy_all
 
-pesto_pasta = Recipe.create(name: 'Pesto Pasta',
+pesto_pasta = Recipe.create(name: 'pesto ;asta',
   meal_type: "dinner",
   cook_time: 30,
   calories: 1500,
@@ -22,7 +22,7 @@ pesto_pasta.ingredients.create!(name: 'pasta', measurement: '16 ounces')
 pesto_pasta.ingredients.create!(name: 'salt', measurement: 'a pinch')
 pesto_pasta.ingredients.create!(name: 'black pepper', measurement: 'a pinch')
 
-orange_chicken = Recipe.create(name: 'Orange Chicken')
+orange_chicken = Recipe.create(name: 'orange chicken')
 orange_chicken.ingredients.create!(name: 'skinless, boneless chicken breast halves', measurement: '6')
 orange_chicken.ingredients.create!(name: 'all-purpose flour', measurement: '1/4 cup')
 orange_chicken.ingredients.create!(name: 'chicken broth', measurement: '1 can')
@@ -30,7 +30,7 @@ orange_chicken.ingredients.create!(name: 'lemon juice', measurement: '2 teaspoon
 orange_chicken.ingredients.create!(name: 'orange marmalade', measurement: '2/3 cup')
 orange_chicken.ingredients.create!(name: 'ground black pepper', measurement: '1/4 teaspoon')
 
-sugar_cookies = Recipe.create(name: 'Sugar Cookies')
+sugar_cookies = Recipe.create(name: 'sugar cookies')
 sugar_cookies.ingredients.create!(name: 'all-purpose flour', measurement: '2 3/4 cups')
 sugar_cookies.ingredients.create!(name: 'baking soda', measurement: '1 teaspoon')
 sugar_cookies.ingredients.create!(name: 'salt', measurement: '1/2 teaspoon')

@@ -2,12 +2,14 @@ class API::RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :update, :destroy]
 
   # GET /api/recipes
-  def index
-    @recipes = Recipe.all
-
-    render json: @recipes
+  def information
+    @recipe = Recipe.find_by(name: params[:name])
+    if @recipe
+      render json: @recipe, status: :ok
+    else
+      render json: {status: "Recipe does not exist"}, status: :unprocessable_entity
+    end
   end
-
   # GET /api/recipes/1
   def show
     render json: @recipe
@@ -41,7 +43,7 @@ class API::RecipesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
-      @recipe = Recipe.find_by(name: params[:name])
+      @recipe = Recipe.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

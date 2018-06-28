@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'api/recipes/information/:name', to: 'api/recipes#information'
+  get 'api/recipes/:name/ingredients', to: 'api/ingredients#index'
 end

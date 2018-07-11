@@ -4,17 +4,16 @@ class API::IngredientsController < ApplicationController
 
   # GET /ingredients
   def index
-    @recipe = Recipe.find_by(name: params[:name])
-
     if @recipe
       @ingredients = @recipe.ingredients
       if @ingredients.present?
         render json: @ingredients, status: :ok
       else
-        render json: {status: "\"#{@recipe.name}\" doesn't have any ingredients."}, status: :ok
+        render json: { message: "\"#{@recipe.name}\" doesn't have any ingredients." }, status: :ok
       end
     else
-      render json: {status: "Recipe does not exist"}, status: :unprocessable_entity
+      render json: { message: 'Recipe does not exist' }, 
+             status: :unprocessable_entity
     end
   end
 
@@ -51,7 +50,7 @@ class API::IngredientsController < ApplicationController
   private
 
   def set_recipe
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.find_by(name: params[:name])
   end
 
   # Use callbacks to share common setup or constraints between actions.
